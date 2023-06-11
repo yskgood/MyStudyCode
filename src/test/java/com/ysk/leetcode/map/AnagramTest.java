@@ -1,9 +1,8 @@
 package com.ysk.leetcode.map;
 
+import com.ysk.leetcode.hash.Anagram;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class AnagramTest {
 
