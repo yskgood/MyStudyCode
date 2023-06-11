@@ -16,7 +16,10 @@
  * 使用线性探测法，一定要保证tableSize大于dataSize。 我们需要依靠哈希表中的空位来解决碰撞问题
  *
  * Java中的实现
- * HashMap（数组+链表/B树）
+ * HashMap（数组+链表/红黑树）
  * HashSet-->TreeMap（红黑树）
+ *
+ * 参考：
+ * 1、Hashmap链表长度为8时转换成红黑树，你知道为什么是8吗（https://blog.csdn.net/H_Rhui/article/details/113601551）
  */
 package com.ysk.leetcode.hash;
