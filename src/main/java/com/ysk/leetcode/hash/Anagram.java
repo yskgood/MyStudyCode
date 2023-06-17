@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * 242. 有效的字母异位词
+ * 若 s 和 t 中每个字符出现的次数都相同，则称 s 和 t 互为字母异位词。
  */
 public class Anagram {
 
