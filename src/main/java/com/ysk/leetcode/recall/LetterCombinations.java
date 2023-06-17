@@ -50,7 +50,7 @@ public class LetterCombinations {
         //循环处理Map的字符
         for (int i = 0; i < charList.size(); i++) {
             //递归继续深度遍历
-            //注意：str和digIndex不能直接修改，影响回溯后的值
+            //注意：str和digIndex不能直接修改，否则影响回溯后的值
             backTracing(str + charList.get(i), digIndex + 1, digitArray, digitCharMap, ans);
         }
     }
