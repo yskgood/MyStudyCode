@@ -5,6 +5,7 @@ package com.ysk.leetcode.string;
  * 思路：
  * 1、根据2K将字符数组切分成N段（整除），和甚于的大小（取余）
  * 2、根据题目要求分别计算每个反转的位置
+ * 3、坐标值的确认可以用个短数组实际看下，避免bug
  */
 public class ReverseStr {
 
