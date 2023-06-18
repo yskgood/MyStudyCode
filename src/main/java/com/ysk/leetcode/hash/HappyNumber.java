@@ -5,6 +5,9 @@ import java.util.Set;
 
 /**
  * 202. 快乐数
+ * 思路：
+ * 1、使用哈希表防止死循环
+ * 2、使用双指针加快计算
  */
 public class HappyNumber {
     public static boolean isHappy(int n) {
@@ -52,6 +55,7 @@ public class HappyNumber {
 
     /**
      * 将字符串转换成字符数组
+     *
      * @param num
      * @return
      */

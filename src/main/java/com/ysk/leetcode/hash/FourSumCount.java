@@ -57,7 +57,7 @@ public class FourSumCount {
         for (Map.Entry<Long, Integer> entry : groupA.entrySet()) {
             long target = -entry.getKey();
             if (groupB.containsKey(target)) {
-                //注意这里笛卡尔积，用相乘
+                //注意：这里笛卡尔积，用相乘
                 findCount += entry.getValue() * groupB.get(target);
             }
         }
@@ -84,6 +84,7 @@ public class FourSumCount {
                 long key = -((long) nums3[k] + nums4[l]);
                 //说明相加==0
                 if (groupA.containsKey(key)) {
+                    //注意：这里需要累加上出现的次数
                     findCount += groupA.get(key);
                 }
             }
