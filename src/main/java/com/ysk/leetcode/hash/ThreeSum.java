@@ -18,7 +18,7 @@ public class ThreeSum {
         Arrays.sort(nums);
         List<List<Integer>> ls = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
-            //避免重复
+            //避免重复，因为这个元素已经被i+1处理过了
             if (i > 0 && (nums[i] == nums[i - 1])) {
                 continue;
             }
