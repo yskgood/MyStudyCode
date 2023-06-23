@@ -8,7 +8,13 @@ import java.util.Stack;
  */
 public class MyQueue {
 
+    /**
+     * 接收插入操作
+     */
     Stack<Integer> inputStack;
+    /**
+     * 输出列表
+     */
     Stack<Integer> outputStack;
 
     public MyQueue() {
@@ -17,13 +23,13 @@ public class MyQueue {
     }
 
     public void push(int x) {
-        //互换stack2到stack1
+        //互换outputStack到inputStack，欢迎插入的顺序
         while (!outputStack.isEmpty()) {
             inputStack.push(outputStack.pop());
         }
-        //stack1中插入
+        //插入最新的数据
         inputStack.push(x);
-        //互换stack1到stack2
+        //互换inputStack到outputStack，恢复操作顺序
         while (!inputStack.isEmpty()) {
             outputStack.push(inputStack.pop());
         }
