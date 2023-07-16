@@ -11,6 +11,9 @@ public class LifeMain {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com.ysk.spring.life");
         Life life = context.getBean(Life.class);
+        System.out.println(life);
         life.sayHello();
+        //Life life1=context.getBean(Life.class);
+        //System.out.println(life1);
     }
 }
