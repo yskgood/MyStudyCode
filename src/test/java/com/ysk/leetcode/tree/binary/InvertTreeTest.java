@@ -1,9 +1,7 @@
-package com.ysk.tree.binary;
+package com.ysk.leetcode.tree.binary;
 
-import com.ysk.tree.TreeNode;
+import com.ysk.leetcode.tree.TreeNode;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class InvertTreeTest {
 
