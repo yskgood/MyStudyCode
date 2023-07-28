@@ -1,4 +1,4 @@
-package com.ysk.tree.binary;
+package com.ysk.leetcode.tree.binary;
 
 import java.util.List;
 

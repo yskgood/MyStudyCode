@@ -1,37 +1,29 @@
-package com.ysk.tree.binary;
+package com.ysk.leetcode.tree.binary;
 
-import com.ysk.tree.TreeNode;
+import com.ysk.leetcode.tree.TreeNode;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 /**
- * 107. 二叉树的层序遍历 II
- * 返回其节点值 自底向上的层序遍历
- * <p>
- * 思路：正常遍历，在将结果反转
- *
- * @see LevelOrder
+ * 515. 在每个树行中找最大值
  */
-public class LevelOrderBottom {
+public class LargestValues {
 
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> ans = new LinkedList<>();
+    public List<Integer> largestValues(TreeNode root) {
+        List<Integer> ans = new LinkedList<>();
         if (root == null) {
             return ans;
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-
         while (!queue.isEmpty()) {
-            List<Integer> ls = new LinkedList<>();
-            //当前行的节点数量
             int size = queue.size();
+            int max = Integer.MIN_VALUE;
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                ls.add(node.val);
+                max = Math.max(node.val, max);
                 if (node.left != null) {
                     queue.offer(node.left);
                 }
@@ -39,12 +31,8 @@ public class LevelOrderBottom {
                     queue.offer(node.right);
                 }
             }
-            ans.add(ls);
+            ans.add(max);
         }
-
-        //反转
-        Collections.reverse(ans);
-
         return ans;
     }
 }

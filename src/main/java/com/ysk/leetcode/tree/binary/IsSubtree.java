@@ -1,6 +1,6 @@
-package com.ysk.tree.binary;
+package com.ysk.leetcode.tree.binary;
 
-import com.ysk.tree.TreeNode;
+import com.ysk.leetcode.tree.TreeNode;
 
 /**
  * 572. 另一棵树的子树

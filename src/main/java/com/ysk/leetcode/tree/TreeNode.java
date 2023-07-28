@@ -1,7 +1,6 @@
-package com.ysk.tree;
+package com.ysk.leetcode.tree;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class TreeNode {
 
