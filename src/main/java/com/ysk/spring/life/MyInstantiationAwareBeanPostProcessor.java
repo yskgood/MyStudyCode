@@ -13,12 +13,28 @@ import org.springframework.stereotype.Component;
 public class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
 
 
+    /**
+     * 使用自定义的方式进行初始化，如果返回具体的Bean，则使用该Bean替换原来的Bean
+     *
+     * @param beanClass the class of the bean to be instantiated
+     * @param beanName the name of the bean
+     * @return
+     * @throws BeansException
+     */
     @Override
     public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
         System.out.println("InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation");
         return InstantiationAwareBeanPostProcessor.super.postProcessBeforeInstantiation(beanClass, beanName);
     }
 
+    /**
+     *  自定义属性设置方式，替换默认的属性设置
+     *
+     * @param bean the bean instance created, with properties not having been set yet
+     * @param beanName the name of the bean
+     * @return
+     * @throws BeansException
+     */
     @Override
     public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
         System.out.println("InstantiationAwareBeanPostProcessor.postProcessAfterInstantiation");

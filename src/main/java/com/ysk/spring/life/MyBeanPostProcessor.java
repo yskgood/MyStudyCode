@@ -11,6 +11,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyBeanPostProcessor implements BeanPostProcessor {
 
+    public MyBeanPostProcessor(){
+        System.out.println("MyBeanPostProcessor");
+    }
+
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         System.out.println("BeanPostProcessor.postProcessBeforeInitialization");

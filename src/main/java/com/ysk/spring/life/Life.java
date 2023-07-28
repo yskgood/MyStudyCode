@@ -25,12 +25,23 @@ public class Life implements BeanNameAware, BeanClassLoaderAware, BeanFactoryAwa
     private BeanFactory beanFactory;
     private Environment environment;
 
+    private String name;
+
+    public void setName(String name) {
+        System.out.println("【注入属性】注入属性name");
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public Life() {
         System.out.println("Life Constructor");
     }
 
     public void sayHello() {
-        System.out.println("hello life");
+        System.out.println("hello life " + this.name);
     }
 
     @Override
