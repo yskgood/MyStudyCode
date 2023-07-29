@@ -10,5 +10,6 @@ public class MaxDepthTest {
         TreeNode treeNode = TreeNode.createCompleteTree("1,2,3,4,5,6,7");
         MaxDepth depth = new MaxDepth();
         Assert.assertEquals(depth.maxDepth(treeNode), 3);
+        Assert.assertEquals(depth.maxDepth2(treeNode), 3);
     }
 }
